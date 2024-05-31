@@ -28,26 +28,14 @@ int isFull(struct stack *ptr)
 
 void Push(struct stack *s, char val)
 {
-    if (isFull(s))
-    {
-    }
-    else
-    {
-        s->top++;
-        s->arr[s->top] = val;
-    }
+    s->top++;
+    s->arr[s->top] = val;
 }
 
 void Pop(struct stack *s)
 {
-    if (isEmpty(s))
-    {
-    }
-    else
-    {
-        char val = s->arr[s->top];
-        s->top--;
-    }
+    char val = s->arr[s->top];
+    s->top--;
 }
 
 int parenthesisMatcher(char *exp)
